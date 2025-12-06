@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BlackjackAvalonia.Views.MainWindow"
+        Title="Blackjack" Width="1000" Height="700">
+
+    <StackPanel Margin="10" Spacing="10">
+
+        <!-- Información del jugador -->
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBlock Text="Saldo:" FontSize="18"/>
+            <TextBlock x:Name="SaldoText" FontSize="18"/>
+            <Button x:Name="NuevaRondaButton" Content="Nueva Ronda" Width="120"/>
+        </StackPanel>
+
+        <!-- Dealer -->
+        <TextBlock Text="Dealer" FontSize="20"/>
+        <StackPanel Orientation="Horizontal" x:Name="DealerPanel" Spacing="5"/>
+        <TextBlock x:Name="DealerTotal" FontSize="16"/>
+
+        <!-- Jugador -->
+        <TextBlock x:Name="JugadorNombre" FontSize="20"/>
+        <StackPanel Orientation="Horizontal" x:Name="JugadorPanel" Spacing="5"/>
+        <TextBlock x:Name="JugadorTotal" FontSize="16"/>
+
+        <!-- Botones de acción -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button x:Name="PedirButton" Content="Pedir Carta" Width="120"/>
+            <Button x:Name="PlantarseButton" Content="Plantarse" Width="120"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
