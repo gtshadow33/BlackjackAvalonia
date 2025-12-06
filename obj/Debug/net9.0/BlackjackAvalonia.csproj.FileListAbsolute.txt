@@ -76,3 +76,4 @@
 /home/gts/Escritorio/c#/BlackjackAvalonia/obj/Debug/net9.0/BlackjackAvalonia.pdb
 /home/gts/Escritorio/c#/BlackjackAvalonia/obj/Debug/net9.0/BlackjackAvalonia.genruntimeconfig.cache
 /home/gts/Escritorio/c#/BlackjackAvalonia/obj/Debug/net9.0/ref/BlackjackAvalonia.dll
+/home/gts/Escritorio/c#/BlackjackAvalonia/obj/Debug/net9.0/BlackjackAvalonia.sourcelink.json

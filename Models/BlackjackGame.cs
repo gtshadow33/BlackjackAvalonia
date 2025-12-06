@@ -6,7 +6,7 @@ public class BlackjackGame
     public Player Jugador { get; private set; }
     public Dealer Dealer { get; private set; }
 
-    public int ApuestaActual { get; private set; }
+    public float ApuestaActual { get; private set; }
 
     public BlackjackGame(string nombreJugador)
     {
@@ -17,7 +17,7 @@ public class BlackjackGame
     }
 
     // Inicia una nueva ronda y descuenta la apuesta del saldo
-    public bool NuevaRonda(int apuesta)
+    public bool NuevaRonda(float apuesta)
     {
         if (apuesta <= 0 || apuesta > Jugador.Saldo)
             return false;

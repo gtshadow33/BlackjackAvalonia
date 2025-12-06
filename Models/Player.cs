@@ -7,7 +7,7 @@ namespace BlackjackAvalonia.Models
     {
         public string Nombre { get; }
         public List<Card> Mano { get; } = new();
-        public int Saldo { get; set; } = 100;
+        public float Saldo { get; set; } = 100;
 
         public Player(string nombre) => Nombre = nombre;
 

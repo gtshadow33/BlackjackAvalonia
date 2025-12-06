@@ -29,8 +29,14 @@ namespace BlackjackAvalonia.Views
         {
              DealerTotal.IsVisible = true;
             JugadorTotal.IsVisible = true;
+            float apuesta;
+            if (!float.TryParse(Entrada.Text, out apuesta) || apuesta <= 0)
+            {
+                MostrarMensaje("Ingrese una cantidad válida para apostar.");
+                return;
+            }
 
-            if (!game.NuevaRonda(10))
+            if (!game.NuevaRonda(apuesta))
             {
                 MostrarMensaje("Saldo insuficiente para apostar.");
                 return;
@@ -103,7 +109,7 @@ namespace BlackjackAvalonia.Views
 
         private void ActualizarUI()
         {
-            SaldoText.Text = game.Jugador.Saldo.ToString();
+            SaldoText.Text = game.Jugador.Saldo.ToString("0.00");
             JugadorNombre.Text = game.Jugador.Nombre;
 
             // Limpiar paneles
