@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="BlackjackAvalonia.Views.Alerta"
         Width="350" Height="150"
-        Background="DarkGray"
+        Background="#232323"
         WindowStartupLocation="CenterOwner"
         CanResize="False"
         Title="Resultado">

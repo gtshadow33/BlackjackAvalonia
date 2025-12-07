@@ -52,7 +52,7 @@ public class BlackjackGame
 
     public void JugadorSePlanta()
     {
-        // Dealer juega según reglas
+        // Dealer juega sgún reglas
         while (Dealer.CalcularTotal() < 17)
             Dealer.PedirCarta(deck.SacarCarta());
 
@@ -67,20 +67,20 @@ public class BlackjackGame
 
         if (totalJugador > 21 || (totalDealer <= 21 && totalDealer > totalJugador))
         {
-            // El jugador ya perdió la apuesta al iniciar la ronda
+            // El jugaor ya perdió la apuesta al iniciar la ronda
         }
         else if (totalJugador == totalDealer)
         {
-            // Empate, se devuelve la apuesta
+            // Empate, s devuelve la apuesta
             Jugador.Saldo += ApuestaActual;
         }
         else
         {
-            // Gana el jugador, recibe doble de la apuesta
+            // Gana el jugaador, recibe doble de la apuesta
             Jugador.Saldo += ApuestaActual * 2;
         }
 
-        // Reiniciar apuesta
+        // Reiniiciar apuesta
         ApuestaActual = 0;
     }
 }
