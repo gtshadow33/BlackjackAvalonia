@@ -3,7 +3,9 @@
         x:Class="BlackjackAvalonia.Views.MainWindow"
         Title="Blackjack"
         Width="1000"
-        Height="700">
+        Height="700"
+        CanResize="false"
+        >
 
     <StackPanel Margin="10" Spacing="15">
 

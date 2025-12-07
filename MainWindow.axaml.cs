@@ -25,7 +25,7 @@ namespace BlackjackAvalonia.Views
             ActualizarUI();
         }
 
-        private void NuevaRonda()
+        public void NuevaRonda()
         {
              DealerTotal.IsVisible = true;
             JugadorTotal.IsVisible = true;
@@ -91,7 +91,7 @@ namespace BlackjackAvalonia.Views
 
         private void MostrarMensaje(string mensaje)
         {   
-            var dlg = new Alerta();
+            var dlg = new Alerta(this);
             dlg.FindControl<TextBlock>("MensajeText")!.Text = mensaje;
             dlg.ShowDialog(this);
         }       
@@ -140,8 +140,8 @@ namespace BlackjackAvalonia.Views
             return new Image
             {
                 Source = new Bitmap(ruta),
-                Width = 100,
-                Height = 150
+                Width = 120,
+                Height = 180
             };
         }
 
@@ -150,8 +150,8 @@ namespace BlackjackAvalonia.Views
             return new Image
             {
                 Source = new Bitmap("Assets/cartas/red_joker.png"),
-                Width = 100,
-                Height = 150
+                Width = 120,
+                Height = 180
             };
         }
 
@@ -177,5 +177,9 @@ namespace BlackjackAvalonia.Views
 
             return $"Assets/cartas/{valor}_of_{palo}.png";
         }
+
+       
+
+        
     }
 }

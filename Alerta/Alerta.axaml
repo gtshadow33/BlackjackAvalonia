@@ -1,15 +1,26 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="BlackjackAvalonia.Views.Alerta"
-        Width="400" Height="150"
+        Width="380"
+        Height="150"
         Background="#232323"
         WindowStartupLocation="CenterOwner"
         CanResize="False"
         Title="Resultado">
-    <TextBlock x:Name="MensajeText"
-               Text="Mensaje"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Center"
-               FontSize="18"
-               Foreground="White"/>
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="10">
+        
+        <TextBlock x:Name="MensajeText"
+                   Text="Mensaje"
+                   FontSize="18"
+                   Foreground="White"
+                   HorizontalAlignment="Center"/>
+
+        <Button x:Name="NuevaRondaButton"
+                Content="Nueva Ronda"
+                Width="150"
+                HorizontalAlignment="Center"/>
+        
+    </StackPanel>
+
 </Window>
