@@ -2,10 +2,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="BlackjackAvalonia.App"
              RequestedThemeVariant="Dark">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme />
-        
+        <FluentTheme/>
+
+        <!-- Estilo general con fondo -->
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush Source="avares://BlackjackAvalonia/Assets/casino_bg.png"
+                                Stretch="UniformToFill"
+                                AlignmentX="Center"
+                                AlignmentY="Center"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Padding" Value="15"/>
+        </Style>
+
+        <!-- Textos -->
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Botones -->
+        <Style Selector="Button">
+            <Setter Property="Padding" Value="8 5"/>
+            <Setter Property="Background" Value="#2e2e2e"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#4a4a4a"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="6"/>
+        </Style>
+
+        <!-- TextBox -->
+        <Style Selector="TextBox">
+            <Setter Property="Background" Value="#2a2a2a"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#555"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
     </Application.Styles>
 </Application>

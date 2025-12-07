@@ -91,21 +91,10 @@ namespace BlackjackAvalonia.Views
 
         private void MostrarMensaje(string mensaje)
         {
-            var dlg = new Window
-            {
-                Width = 300,
-                Height = 150,
-                Title = "Resultado",
-                Content = new TextBlock
-                {
-                    Text = mensaje,
-                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
-                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                    FontSize = 18
-                }
-            };
+            var dlg = new Alerta();
+            dlg.FindControl<TextBlock>("MensajeText")!.Text = mensaje;
             dlg.ShowDialog(this);
-        }
+        }       
 
         private void ActualizarUI()
         {

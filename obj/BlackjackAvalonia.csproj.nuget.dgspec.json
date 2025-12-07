@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/gts/Escritorio/c#/BlackjackAvalonia/BlackjackAvalonia.csproj": {}
+    "/home/gts/c#/BlackjackAvalonia/BlackjackAvalonia.csproj": {}
   },
   "projects": {
-    "/home/gts/Escritorio/c#/BlackjackAvalonia/BlackjackAvalonia.csproj": {
+    "/home/gts/c#/BlackjackAvalonia/BlackjackAvalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gts/Escritorio/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
+        "projectUniqueName": "/home/gts/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
         "projectName": "BlackjackAvalonia",
-        "projectPath": "/home/gts/Escritorio/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
+        "projectPath": "/home/gts/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
         "packagesPath": "/home/gts/.nuget/packages/",
-        "outputPath": "/home/gts/Escritorio/c#/BlackjackAvalonia/obj/",
+        "outputPath": "/home/gts/c#/BlackjackAvalonia/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/gts/.nuget/NuGet/NuGet.Config"
@@ -39,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -81,18 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[9.0.11, 9.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

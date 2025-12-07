@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AskScxoeT78=",
+  "dgSpecHash": "P7ms04ud23E=",
   "success": true,
-  "projectFilePath": "/home/gts/Escritorio/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
+  "projectFilePath": "/home/gts/c#/BlackjackAvalonia/BlackjackAvalonia.csproj",
   "expectedPackageFiles": [
     "/home/gts/.nuget/packages/avalonia/11.3.9/avalonia.11.3.9.nupkg.sha512",
     "/home/gts/.nuget/packages/avalonia.angle.windows.natives/2.1.25547.20250602/avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
@@ -36,8 +36,7 @@
     "/home/gts/.nuget/packages/svg.custom/3.0.2/svg.custom.3.0.2.nupkg.sha512",
     "/home/gts/.nuget/packages/svg.model/3.0.2/svg.model.3.0.2.nupkg.sha512",
     "/home/gts/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
-    "/home/gts/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512",
-    "/home/gts/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.11/microsoft.netcore.app.host.linux-x64.9.0.11.nupkg.sha512"
+    "/home/gts/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512"
   ],
   "logs": []
 }
