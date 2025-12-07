@@ -17,16 +17,32 @@
 
         <!-- Dealer -->
         <TextBlock Text="Dealer" FontSize="20"/>
-        <StackPanel Orientation="Horizontal" x:Name="DealerPanel" Spacing="5"/>
-        <TextBlock x:Name="DealerTotal" FontSize="16"/>
+        
+        <StackPanel Orientation="Horizontal"
+                    x:Name="DealerPanel"
+                    Spacing="5"
+                    HorizontalAlignment="Center"/>
+        
+        <TextBlock x:Name="DealerTotal"
+                   FontSize="16"
+                   HorizontalAlignment="Center"/>
 
         <!-- Jugador -->
         <TextBlock x:Name="JugadorNombre" FontSize="20"/>
-        <StackPanel Orientation="Horizontal" x:Name="JugadorPanel" Spacing="5"/>
-        <TextBlock x:Name="JugadorTotal" FontSize="16"/>
+
+        <StackPanel Orientation="Horizontal"
+                    x:Name="JugadorPanel"
+                    Spacing="5"
+                    HorizontalAlignment="Center"/>
+
+        <TextBlock x:Name="JugadorTotal"
+                   FontSize="16"
+                   HorizontalAlignment="Center"/>
 
         <!-- Botones de acción -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="10">
             <Button x:Name="PedirButton" Content="Pedir Carta" Width="140"/>
             <Button x:Name="PlantarseButton" Content="Plantarse" Width="140"/>
         </StackPanel>

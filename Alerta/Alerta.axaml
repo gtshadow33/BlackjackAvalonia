@@ -1,7 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="BlackjackAvalonia.Views.Alerta"
-        Width="350" Height="150"
+        Width="400" Height="150"
         Background="#232323"
         WindowStartupLocation="CenterOwner"
         CanResize="False"

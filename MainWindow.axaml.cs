@@ -90,13 +90,14 @@ namespace BlackjackAvalonia.Views
         }
 
         private void MostrarMensaje(string mensaje)
-        {
+        {   
             var dlg = new Alerta();
             dlg.FindControl<TextBlock>("MensajeText")!.Text = mensaje;
             dlg.ShowDialog(this);
         }       
 
         private void ActualizarUI()
+        
         {
             SaldoText.Text = game.Jugador.Saldo.ToString("0.00");
             JugadorNombre.Text = game.Jugador.Nombre;
@@ -104,6 +105,13 @@ namespace BlackjackAvalonia.Views
             // Limpiar paneles
             JugadorPanel.Children.Clear();
             DealerPanel.Children.Clear();
+
+            //solucion del bug del total
+
+            if (game.Jugador.CalcularTotal() == 0)
+            {
+                return; 
+            }
 
             // Mostrar cartas jugador
             foreach (var carta in game.Jugador.Mano)
@@ -120,6 +128,9 @@ namespace BlackjackAvalonia.Views
 
             JugadorTotal.Text = $"Total: {game.Jugador.CalcularTotal()}";
             DealerTotal.Text = rondaIniciada ? "Total: ?" : $"Total: {game.Dealer.CalcularTotal()}";
+
+        
+            
         }
 
         private Control CrearCartaImage(Card carta)
