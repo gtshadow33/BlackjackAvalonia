@@ -1,0 +1,5 @@
+/home/gts/Escritorio/c#/BlackjackAvalonia/bin/Release/net9.0/win-x64/publish/BlackjackAvalonia.pdb
+/home/gts/Escritorio/c#/BlackjackAvalonia/bin/Release/net9.0/win-x64/publish/av_libglesv2.dll
+/home/gts/Escritorio/c#/BlackjackAvalonia/bin/Release/net9.0/win-x64/publish/libHarfBuzzSharp.dll
+/home/gts/Escritorio/c#/BlackjackAvalonia/bin/Release/net9.0/win-x64/publish/libSkiaSharp.dll
+/home/gts/Escritorio/c#/BlackjackAvalonia/bin/Release/net9.0/win-x64/publish/BlackjackAvalonia.exe

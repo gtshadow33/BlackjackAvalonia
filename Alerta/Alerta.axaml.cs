@@ -13,12 +13,24 @@ namespace BlackjackAvalonia.Views
             InitializeComponent();
             this.mainWindow = mainWindow;
             NuevaRondaButton.Click += (_, _) => Ronda();
+            
+          
         }
 
         private void Ronda()
         {
-            mainWindow.NuevaRonda();
-            Close();
+            float apuesta;
+            if (float.TryParse(Entrada.Text, out apuesta))
+            {
+                mainWindow.NuevaRonda(apuesta);
+                Close();
+            }
+            else
+            {
+                mainWindow.MostrarMensaje("Ingrese una cantidad válida para apostar.");
+                Close();
+            }
+            
         }
     }
 }

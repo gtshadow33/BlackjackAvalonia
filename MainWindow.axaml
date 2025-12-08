@@ -14,7 +14,6 @@
             <TextBlock Text="Saldo:" FontSize="18"/>
             <TextBlock x:Name="SaldoText" FontSize="18"/>
             <Button x:Name="NuevaRondaButton" Content="Nueva Ronda" Width="140"/>
-            <TextBox x:Name="Entrada" Width="120" Watermark="Apuesta"/>
         </StackPanel>
 
         <!-- Dealer -->

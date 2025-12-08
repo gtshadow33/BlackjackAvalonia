@@ -9,6 +9,7 @@ namespace BlackjackAvalonia.Views
         
         private BlackjackGame game;
         private bool rondaIniciada = false;
+        public float apuesta  ;
 
         public MainWindow()
         {
@@ -16,7 +17,7 @@ namespace BlackjackAvalonia.Views
 
             game = new BlackjackGame("Jugador");
 
-            NuevaRondaButton.Click += (_, _) => NuevaRonda();
+            NuevaRondaButton.Click += (_, _) => MostrarMensaje("Ingrese una apuesta en la ventana emergente.");
             PedirButton.Click += (_, _) => PedirCarta();
             PlantarseButton.Click += (_, _) => Plantarse();
             DealerTotal.IsVisible = false;
@@ -25,16 +26,10 @@ namespace BlackjackAvalonia.Views
             ActualizarUI();
         }
 
-        public void NuevaRonda()
+        public void NuevaRonda(float apuesta = 0)
         {
              DealerTotal.IsVisible = true;
             JugadorTotal.IsVisible = true;
-            float apuesta;
-            if (!float.TryParse(Entrada.Text, out apuesta) || apuesta <= 0)
-            {
-                MostrarMensaje("Ingrese una cantidad válida para apostar.");
-                return;
-            }
 
             if (!game.NuevaRonda(apuesta))
             {
@@ -89,7 +84,7 @@ namespace BlackjackAvalonia.Views
                 MostrarMensaje("¡Ganaste la ronda!");
         }
 
-        private void MostrarMensaje(string mensaje)
+        public void MostrarMensaje(string mensaje)
         {   
             var dlg = new Alerta(this);
             dlg.FindControl<TextBlock>("MensajeText")!.Text = mensaje;
