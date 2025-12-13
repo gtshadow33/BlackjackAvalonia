@@ -20,7 +20,7 @@
                 Content="Nueva Ronda"
                 Width="150"
                 HorizontalAlignment="Center"/>
-        <TextBox x:Name="Entrada" Width="120" Watermark="Apuesta"/>
+        <TextBox x:Name="Entrada" Width="150" Watermark="Apuesta"/>
         
     </StackPanel>
 

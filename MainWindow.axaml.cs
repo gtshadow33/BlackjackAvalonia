@@ -23,13 +23,18 @@ namespace BlackjackAvalonia.Views
             DealerTotal.IsVisible = false;
             JugadorTotal.IsVisible = false;
 
+            PedirButton.IsVisible = false;
+            PlantarseButton.IsVisible = false;
+
             ActualizarUI();
         }
 
         public void NuevaRonda(float apuesta = 0)
         {
-             DealerTotal.IsVisible = true;
+             DealerTotal.IsVisible = false;
             JugadorTotal.IsVisible = true;
+            PedirButton.IsVisible = true;
+            PlantarseButton.IsVisible = true;
 
             if (!game.NuevaRonda(apuesta))
             {
@@ -55,6 +60,8 @@ namespace BlackjackAvalonia.Views
             {
                 MostrarMensaje("¡Te pasaste de 21! Pierdes la ronda.");
                 rondaIniciada = false;
+                 DealerTotal.IsVisible = true;
+                DealerTotal.Text = $"Total: {game.Dealer.CalcularTotal()}";
             }
 
             ActualizarUI();
@@ -67,9 +74,11 @@ namespace BlackjackAvalonia.Views
                 MostrarMensaje("Primero inicia una ronda.");
                 return;
             }
-
+            
             game.JugadorSePlanta();
             rondaIniciada = false;
+             DealerTotal.IsVisible = true;
+            DealerTotal.Text = $"Total: {game.Dealer.CalcularTotal()}";
 
             ActualizarUI();
 
@@ -122,7 +131,7 @@ namespace BlackjackAvalonia.Views
             }
 
             JugadorTotal.Text = $"Total: {game.Jugador.CalcularTotal()}";
-            DealerTotal.Text = rondaIniciada ? "Total: ?" : $"Total: {game.Dealer.CalcularTotal()}";
+            
 
         
             

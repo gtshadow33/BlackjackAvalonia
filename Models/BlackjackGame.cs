@@ -19,6 +19,7 @@ public class BlackjackGame
     // Inicia una nueva ronda y descuenta la apuesta del saldo
     public bool NuevaRonda(float apuesta)
     {
+        
         if (apuesta <= 0 || apuesta > Jugador.Saldo)
             return false;
 
