@@ -1,15 +1,16 @@
 using Avalonia.Controls;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using BlackjackAvalonia.Models;
+using System;
 
 namespace BlackjackAvalonia.Views
 {
     public partial class MainWindow : Window
     {
-        
         private BlackjackGame game;
         private bool rondaIniciada = false;
-        public float apuesta  ;
+        public float apuesta;
 
         public MainWindow()
         {
@@ -31,7 +32,7 @@ namespace BlackjackAvalonia.Views
 
         public void NuevaRonda(float apuesta = 0)
         {
-             DealerTotal.IsVisible = false;
+            DealerTotal.IsVisible = false;
             JugadorTotal.IsVisible = true;
             PedirButton.IsVisible = true;
             PlantarseButton.IsVisible = true;
@@ -60,7 +61,7 @@ namespace BlackjackAvalonia.Views
             {
                 MostrarMensaje("¡Te pasaste de 21! Pierdes la ronda.");
                 rondaIniciada = false;
-                 DealerTotal.IsVisible = true;
+                DealerTotal.IsVisible = true;
                 DealerTotal.Text = $"Total: {game.Dealer.CalcularTotal()}";
             }
 
@@ -74,10 +75,10 @@ namespace BlackjackAvalonia.Views
                 MostrarMensaje("Primero inicia una ronda.");
                 return;
             }
-            
+
             game.JugadorSePlanta();
             rondaIniciada = false;
-             DealerTotal.IsVisible = true;
+            DealerTotal.IsVisible = true;
             DealerTotal.Text = $"Total: {game.Dealer.CalcularTotal()}";
 
             ActualizarUI();
@@ -94,34 +95,28 @@ namespace BlackjackAvalonia.Views
         }
 
         public void MostrarMensaje(string mensaje)
-        {   
+        {
             var dlg = new Alerta(this);
             dlg.FindControl<TextBlock>("MensajeText")!.Text = mensaje;
             dlg.ShowDialog(this);
-        }       
+        }
 
         private void ActualizarUI()
-        
         {
             SaldoText.Text = game.Jugador.Saldo.ToString("0.00");
             JugadorNombre.Text = game.Jugador.Nombre;
 
-            // Limpiar paneles
             JugadorPanel.Children.Clear();
             DealerPanel.Children.Clear();
 
-            //solucion del bug del total
-
             if (game.Jugador.CalcularTotal() == 0)
             {
-                return; 
+                return;
             }
 
-            // Mostrar cartas jugador
             foreach (var carta in game.Jugador.Mano)
                 JugadorPanel.Children.Add(CrearCartaImage(carta));
 
-            // Mostrar cartas dealer
             for (int i = 0; i < game.Dealer.Mano.Count; i++)
             {
                 if (i == 0 || !rondaIniciada)
@@ -131,19 +126,17 @@ namespace BlackjackAvalonia.Views
             }
 
             JugadorTotal.Text = $"Total: {game.Jugador.CalcularTotal()}";
-            
-
-        
-            
         }
 
         private Control CrearCartaImage(Card carta)
         {
             string ruta = ObtenerNombreArchivo(carta);
 
+            // AvaloniaResource
+            var uri = new Uri($"avares://BlackjackAvalonia/{ruta}");
             return new Image
             {
-                Source = new Bitmap(ruta),
+                Source = new Bitmap(AssetLoader.Open(uri)),
                 Width = 120,
                 Height = 180
             };
@@ -151,9 +144,10 @@ namespace BlackjackAvalonia.Views
 
         private Control CrearCartaBack()
         {
+            var uri = new Uri("avares://BlackjackAvalonia/Assets/cartas/red_joker.png");
             return new Image
             {
-                Source = new Bitmap("Assets/cartas/red_joker.png"),
+                Source = new Bitmap(AssetLoader.Open(uri)),
                 Width = 120,
                 Height = 180
             };
@@ -181,9 +175,5 @@ namespace BlackjackAvalonia.Views
 
             return $"Assets/cartas/{valor}_of_{palo}.png";
         }
-
-       
-
-        
     }
 }
